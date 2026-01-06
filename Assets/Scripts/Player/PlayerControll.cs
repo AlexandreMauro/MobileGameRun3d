@@ -72,7 +72,7 @@ public class PlayerControll : Singelton<PlayerControll>
     public void Start_Run()
     {
         _CanRun = true;
-        animatorManager.Play(AnimatorManager.Animationtype.WALK,_CurrentSpeed/_baseSpeedAnimation);
+        animatorManager.Play(AnimatorManager.Animationtype.WALK, _CurrentSpeed  /_baseSpeedAnimation);
     }
 
     private void Stop_Run()
