@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+using DG.Tweening;
 
 public class LevelManager : MonoBehaviour
 {
@@ -7,17 +9,22 @@ public class LevelManager : MonoBehaviour
    public List<GameObject> Levels;
    public List<LevelPieceSetup> LevelPieceSetup;
 
-
+    [Header("ArtPieces Animation")]
+    public float ScaleDuration = .1f;
+    public float DelayBetweenPieces = .1f;
+    public Ease ease = Ease.OutBack;
    
    [SerializeField]private List<LevelPieceBase> _SpawnedPieces = new List<LevelPieceBase>();
    private GameObject _currentLevel;
    private LevelPieceSetup _currentpice;
    [SerializeField] private int _Index;
 
-    private void Awake()
+   
+
+    private void Start()
     {
         //NextLevelSpawn();
-        //CreateLevelPieces();
+        CreateLevelPieces();
     }
 
     private void NextLevelSpawn()
@@ -78,7 +85,26 @@ public class LevelManager : MonoBehaviour
             {
                 CreatePieces(_currentpice.PieceEnd);
             }
-                
+
+        StartCoroutine(SpawnedPiecebyTime());        
+    }
+
+    IEnumerator SpawnedPiecebyTime()
+    {
+        foreach( var p in _SpawnedPieces)
+        {
+            p.transform.localScale = Vector3.zero;
+        }
+        yield return null;
+
+        for(int i =0; i<_SpawnedPieces.Count; i++)
+        {
+            _SpawnedPieces[i].transform.DOScale(1, ScaleDuration).SetEase(ease);
+            yield return new WaitForSeconds(DelayBetweenPieces);
+        }
+    
+    CoinAnimatorManager.Instance.StartAnimation();
+
     }
 
     private void ClearSpawnedPieces()

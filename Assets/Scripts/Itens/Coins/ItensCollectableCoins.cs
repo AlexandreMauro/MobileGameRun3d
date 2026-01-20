@@ -13,10 +13,10 @@ public class ItensCollectableCoins : ItensCollectablesBase
     public float minDistance;   
    
    
-   /*private void Start()
+   private void Start()
     {
-        CoinsAimationMnanager.Instance.CoinsAimationMnanager(this);
-   }*/
+        CoinAnimatorManager.Instance.register(this);
+   }
 
     protected override void Collected()
     {
@@ -30,7 +30,7 @@ public class ItensCollectableCoins : ItensCollectablesBase
         base.OnCollected();
           Collider.enabled = false;        
           Collect = true;        
-          //PlayerControll.Instance.Bounce();
+          PlayerControll.Instance.bounceHelper.Bounce();
     }
 
     private void Update()

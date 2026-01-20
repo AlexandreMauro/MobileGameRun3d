@@ -23,7 +23,7 @@ public class PlayerControll : Singelton<PlayerControll>
 
 [Header("Animator Manager")]
     public AnimatorManager animatorManager;
-   
+   public BounceHelper bounceHelper;
 
     //privates
     private bool _CanRun;
@@ -65,8 +65,11 @@ public class PlayerControll : Singelton<PlayerControll>
         }
     }
 
-
-#region Start and stop run methods
+    #region  Animation methods
+    
+    
+    #endregion
+    #region Start and stop run methods
 
 
     public void Start_Run()

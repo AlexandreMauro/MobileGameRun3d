@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 5142454066399109318}
   - component: {fileID: 8906776609086801610}
   - component: {fileID: 7837086639046905032}
+  - component: {fileID: 1176149343553789096}
   m_Layer: 0
   m_Name: Ground (1)
   m_TagString: Untagged
@@ -290,6 +291,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1176149343553789096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8149513501898757641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11df0e9c5a5cfc849adcc082e0c594c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRender: {fileID: 8906776609086801610}
+  duration: 1.8
+  StartColor: {r: 0, g: 0.42745098, b: 1, a: 1}
 --- !u!1 &8342816019424582505
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,6 +762,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1821406470995587126, guid: 2099678033c4788499e62e300174418b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954494494569122077, guid: 2099678033c4788499e62e300174418b, type: 3}
+      propertyPath: StartColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954494494569122077, guid: 2099678033c4788499e62e300174418b, type: 3}
+      propertyPath: StartColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954494494569122077, guid: 2099678033c4788499e62e300174418b, type: 3}
+      propertyPath: StartColor.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9181767218106962629, guid: 2099678033c4788499e62e300174418b, type: 3}
