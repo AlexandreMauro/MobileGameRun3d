@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 730711159064169774}
   - component: {fileID: 776554865925834169}
   - component: {fileID: 5143916861249226283}
+  - component: {fileID: -275952164265805783}
   m_Layer: 0
   m_Name: PowerUpCoins
   m_TagString: Untagged
@@ -68,10 +69,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerTag: Player
-  GrafhicItem: {fileID: 0}
+  GrafhicItem: {fileID: 3403327920726532296}
   ParticleSystem: {fileID: 0}
   audioSource: {fileID: 0}
-  duration: 0
+  duration: 1.5
+  ScaleDuration: 0.5
+  DelayBetweenPieces: 2
+  ease: 27
+  SizeAmaunt: 8
+--- !u!95 &-275952164265805783
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3403327920726532296}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 132615a7ba56f0b4895f899791e0d395, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6224289611103254676
 GameObject:
   m_ObjectHideFlags: 0

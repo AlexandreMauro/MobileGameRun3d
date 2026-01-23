@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 192492745568347868}
   - component: {fileID: 1258624206475686840}
   - component: {fileID: 550168808927487595}
+  - component: {fileID: 2840032029117755649}
   m_Layer: 0
   m_Name: PFB_PowerUpFly
   m_TagString: Untagged
@@ -71,10 +72,34 @@ MonoBehaviour:
   GrafhicItem: {fileID: 2602405778989251369}
   ParticleSystem: {fileID: 0}
   audioSource: {fileID: 0}
-  duration: 3
+  duration: 1
+  ScaleDuration: 0.5
+  DelayBetweenPieces: 2
+  ease: 27
   amountHeight: 2
   animationDuration: 0.3
-  ease: 27
+--- !u!95 &2840032029117755649
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2602405778989251369}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 132615a7ba56f0b4895f899791e0d395, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3728102143405259225
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,7 +127,7 @@ Transform:
   m_GameObject: {fileID: 3728102143405259225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.11, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

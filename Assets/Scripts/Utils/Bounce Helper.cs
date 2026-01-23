@@ -1,25 +1,60 @@
 using UnityEngine;
 using DG.Tweening;
+using System.Collections;
+using Unity.VisualScripting;
+
 
 public class BounceHelper : MonoBehaviour
 {
-    [Header("Bounce Animation")]
+    [Header("Bounce Animation ")]
     public float ScaleDuration = .1f;
-    public float ScaleBounce = 1.2f;
+    public float ScaleBounceGeneral = 1.2f;
+    public int vibrato = 10;
+    public float strength = 1f;
     public Ease ease = Ease.OutBack;
 
+    public Transform OriginalObject;
+    public Vector3 originalScale;
+   
 
-    public void Update()
+    void Start() 
     {
-         if(Input.GetKeyDown(KeyCode.S))
+        originalScale = new Vector3 (OriginalObject.localScale.x, OriginalObject.localScale.y, OriginalObject.localScale.z);    
+    }
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.X))
         {
-            Bounce();
+            BouncePowerUp();
         }
+
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            BounceBase();
+        }
+        
+       
     }
 
-    public void Bounce()
+
+
+    public void OriginalScale()
     {
-        transform.DOScale(ScaleBounce, ScaleDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
+        OriginalObject.transform.DOScale(originalScale,ScaleDuration).SetEase(ease);
+    }
+    public void BounceBase()
+    {
+        OriginalObject.transform.DOScale(ScaleBounceGeneral, ScaleDuration).SetLoops(1, LoopType.Yoyo).SetEase(ease).OnComplete(() => OriginalScale()); 
+    }
+
+    public void BouncePowerUp()
+    {
+
+        OriginalObject.transform.DOShakeScale(ScaleDuration, strength, vibrato).SetLoops(1, LoopType.Yoyo).SetEase(ease).OnComplete(() => OriginalScale());
+       
+       
+        
         
     }
 }
+

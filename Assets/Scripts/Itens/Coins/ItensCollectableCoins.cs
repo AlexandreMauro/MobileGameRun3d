@@ -27,10 +27,10 @@ public class ItensCollectableCoins : ItensCollectablesBase
 
     protected override void OnCollected()
     {
-        base.OnCollected();
+            base.OnCollected();
           Collider.enabled = false;        
-          Collect = true;        
-          PlayerControll.Instance.bounceHelper.Bounce();
+          Collect = true;
+          PlayerControll.Instance.bounceHelper.BounceBase();
     }
 
     private void Update()

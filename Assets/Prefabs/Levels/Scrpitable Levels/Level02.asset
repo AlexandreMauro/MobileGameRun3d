@@ -17,10 +17,12 @@ MonoBehaviour:
   - {fileID: 2901978131244134599, guid: e66b374df1385ca4aa50cf8abb963d4b, type: 3}
   - {fileID: 3719917305289722116, guid: feb42c0c96c88a14c820b2bc741c7804, type: 3}
   - {fileID: 3719917305289722116, guid: 0c26862c7e1924b4da0d9595f7a3cf38, type: 3}
+  - {fileID: 3719917305289722116, guid: 7e95f34fccd3ddb4ca952d7b2ca349a3, type: 3}
+  - {fileID: 3719917305289722116, guid: a650450372a790c41b7d94d64279fbb0, type: 3}
   PieceStart:
   - {fileID: 3719917305289722116, guid: 9d2f9d143d2225e4698a71fbf7044a9a, type: 3}
   PieceEnd:
   - {fileID: 3719917305289722116, guid: 317da7556f1e4c24b9bec1901c8d407b, type: 3}
-  StartPiecesNumber: 1
-  PiecesNumber: 8
+  StartPiecesNumber: 2
+  PiecesNumber: 6
   EndPiecesNumber: 1

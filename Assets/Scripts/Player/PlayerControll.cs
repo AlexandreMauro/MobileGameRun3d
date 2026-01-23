@@ -5,6 +5,7 @@ using UnityEngine;
 using Core.Singelton;
 using UnityEngine.Video;
 using DG.Tweening;
+using System.Collections;
 
 public class PlayerControll : Singelton<PlayerControll>
 {
@@ -15,15 +16,19 @@ public class PlayerControll : Singelton<PlayerControll>
     public string ObstacleTag = "Obstacle";
     public string EndLineTag = "EndLine";
 
+    public float delayBounce = 1f;
+
 [Header("Objects references")]
     public GameObject FinishPainel;
     public TextMeshPro  UITextPowerUpText;
     public Transform target;
     public GameObject CoinCollector;
 
+    
+
 [Header("Animator Manager")]
     public AnimatorManager animatorManager;
-   public BounceHelper bounceHelper;
+    public BounceHelper bounceHelper;
 
     //privates
     private bool _CanRun;
@@ -33,13 +38,12 @@ public class PlayerControll : Singelton<PlayerControll>
     private bool _Invencible;
     private float _baseSpeedAnimation = 7;
 
-   
     public void Start()
     {   ResetPosition();
         ResetSpeed();
         FinishPainel.SetActive(false);
+        
     }
-    // Update is called once per frame
     void Update()
     {
         if(!_CanRun) return;
@@ -64,12 +68,7 @@ public class PlayerControll : Singelton<PlayerControll>
             EndScreeneNDlINE();
         }
     }
-
-    #region  Animation methods
-    
-    
-    #endregion
-    #region Start and stop run methods
+#region Start and stop run methods
 
 
     public void Start_Run()
@@ -118,7 +117,7 @@ public class PlayerControll : Singelton<PlayerControll>
         /*ar p = transform.position;
         p.y = _StartPosition.y;
         transform.position = p;*/
-        transform.DOMoveY(_StartPosition.y, AnimationDuration).SetEase(Ease.OutBack);
+        transform.DOMoveY(_StartPosition.y, AnimationDuration).SetEase(Ease.InBack);
     }
     public void ResetSpeed()
     {
@@ -150,14 +149,12 @@ public class PlayerControll : Singelton<PlayerControll>
         transform.position = p;*/
 
         transform.DOMoveY(_StartPosition.y + AmauntHeight, duration).SetEase(ease);
-        Invoke(nameof(Reset_Height),duration);
+        
     }
 
     public void ChanceCoinCollectSize(float Amaunt)
     {
         CoinCollector.transform.localScale = Vector3.one * Amaunt;
     }
-    #endregion
-
-    
+    #endregion 
 }

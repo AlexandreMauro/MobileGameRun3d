@@ -29,7 +29,7 @@ public class ItensCollectablesBase : MonoBehaviour
    
     protected virtual void  Collected()
     {
-     
+      
     }
 
     protected virtual void OnCollected()
