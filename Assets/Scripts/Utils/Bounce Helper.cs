@@ -8,6 +8,7 @@ public class BounceHelper : MonoBehaviour
 {
     [Header("Bounce Animation ")]
     public float ScaleDuration = .1f;
+    public float ScaleDurationPowerUp = .1f;
     public float ScaleBounceGeneral = 1.2f;
     public int vibrato = 10;
     public float strength = 1f;
@@ -50,7 +51,7 @@ public class BounceHelper : MonoBehaviour
     public void BouncePowerUp()
     {
 
-        OriginalObject.transform.DOShakeScale(ScaleDuration, strength, vibrato).SetLoops(1, LoopType.Yoyo).SetEase(ease).OnComplete(() => OriginalScale());
+        OriginalObject.transform.DOShakeScale(ScaleDurationPowerUp, strength, vibrato).SetLoops(1, LoopType.Yoyo).SetEase(ease).OnComplete(() => OriginalScale());
        
        
         

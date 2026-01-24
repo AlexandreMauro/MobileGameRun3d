@@ -1802,7 +1802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3768391262568206101, guid: 44ddcd9878afa3a45906fe35c5b37962, type: 3}
       propertyPath: ScaleDuration
-      value: 0.5
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 3768391262568206101, guid: 44ddcd9878afa3a45906fe35c5b37962, type: 3}
       propertyPath: OriginalObject
@@ -1819,6 +1819,10 @@ PrefabInstance:
     - target: {fileID: 3768391262568206101, guid: 44ddcd9878afa3a45906fe35c5b37962, type: 3}
       propertyPath: ScaleBounceGeneral
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3768391262568206101, guid: 44ddcd9878afa3a45906fe35c5b37962, type: 3}
+      propertyPath: ScaleDurationPowerUp
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5188013450033804570, guid: 44ddcd9878afa3a45906fe35c5b37962, type: 3}
       propertyPath: m_LocalScale.x
